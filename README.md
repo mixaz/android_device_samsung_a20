@@ -10,7 +10,11 @@ $ repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifes
 ```
 # Clone a20 repo
 ```
-$ git clone https://github.com/topser9/twrp_device_samsung_a20 device/samsung/a20
+$ git clone https://github.com/mixaz/android_device_samsung_a20 device/samsung/a20
+```
+Or you can add it to repo manifest.xml:
+```
+<project path="device/samsung/a20" name="mixaz/android_device_samsung_a20" remote="github" revision="android-9.0" />
 ```
 Sync
 ```
@@ -20,7 +24,7 @@ $ repo sync
 ```
 $ export ALLOW_MISSING_DEPENDENCIES=true
  . build/envsetup.sh
- lunch omni_a20dd-eng
+ lunch omni_a20-eng
  mka recoveryimage
 ```
 ## How to find the image built
